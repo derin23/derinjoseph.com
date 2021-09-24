@@ -30,7 +30,7 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#skills">Skills</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>       
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contactForm">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -197,7 +197,7 @@
             </div>
         </section>
         <!-- Contact Section-->
-        <section class="page-section" id="contact">
+        <section class="page-section" id="contactForm">
             <div class="container">
                 <!-- Contact Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
@@ -209,7 +209,7 @@
                 </div>
                 <!-- Contact Section Form-->
                 <div class="row justify-content-center">
-                    <div class="col-lg-8 col-xl-7">
+                    <div class="col-lg-8 col-xl-7" style="margin-top: -100px;">
                         <!-- * * * * * * * * * * * * * * *-->
                         <!-- * * SB Forms Contact Form * *-->
                         <!-- * * * * * * * * * * * * * * *-->
@@ -217,7 +217,7 @@
                         <!-- To make this form functional, sign up at-->
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
-                        <!-- <form id="contactForm" data-sb-form-api-token="API_TOKEN" name="contact" data-netlify="true">
+                        <!-- <form id="contactForm" data-sb-form-api-token="API_TOKEN" name="contact" data-netlify="true" method="POST">
                             <div class="form-floating mb-3">
                                 <input name="name" class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
                                 <label for="name">Full name</label>
@@ -249,25 +249,27 @@
                             </div>
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
-                        </form> -->
-                        <form name="contact" method="POST" data-netlify="true">
-                            <p>
-                              <label>Your Name: <input type="text" name="name" /></label>   
-                            </p>
-                            <p>
-                              <label>Your Email: <input type="email" name="email" /></label>
-                            </p>
-                            <p>
-                              <label>Phone Number: <input name="phone" type="tel">
-                              </input></label>
-                            </p>
-                            <p>
-                              <label>Message: <textarea name="message"></textarea></label>
-                            </p>
-                            <p>
-                              <button type="submit">Send</button>
-                            </p>
-                          </form>
+                        </form>  -->
+                            <div class="form-container"> 
+                             <form id="contact" action="index.html" data-netlify="true" method="post">
+                              <h3>Please reach out!</h3>
+                              <fieldset>
+                                <input name="name" placeholder="Your name" type="text" tabindex="1" required autofocus>
+                              </fieldset>
+                              <fieldset>
+                                <input name="email" placeholder="Your Email Address" type="email" tabindex="2" required>
+                              </fieldset>
+                              <fieldset>
+                                <input name="phone" placeholder="Your Phone Number" type="tel" tabindex="3" required>
+                              </fieldset>
+                              <fieldset>
+                                <textarea name="message" placeholder="Type your message here...." tabindex="5" required></textarea>
+                              </fieldset>
+                              <fieldset>
+                                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                              </fieldset>
+                            </form>
+                           </div>
                     </div>
                 </div>
             </div>
