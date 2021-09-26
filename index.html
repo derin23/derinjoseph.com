@@ -15,8 +15,13 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <script>
+            function getCurrentYear() {
+              document.getElementById("year").innerHTML = new Date().getFullYear();
+            }
+          </script>
     </head>
-    <body id="page-top">
+    <body id="page-top" onload="getCurrentYear()">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
@@ -308,7 +313,7 @@
         </footer>
         <!-- Copyright Section-->
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy; derinjoseph.com 2021</small></div>
+            <div class="container"><small>Copyright &copy; derinjoseph.com <span id="year"></span></small></div>
         </div>
         <!-- Portfolio Modals-->
         <!-- Portfolio Modal 1-->
