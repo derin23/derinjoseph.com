@@ -220,16 +220,16 @@
                              <form id="contact" data-netlify="true" method="post">
                               <h3>Please reach out!</h3>
                               <fieldset>
-                                <input name="name" placeholder="Your name" type="text" tabindex="1" required>
+                                <input name="name" placeholder="Enter Your Name" type="text" tabindex="1" required>
                               </fieldset>
                               <fieldset>
-                                <input name="email" placeholder="Your Email Address" type="email" tabindex="2" required>
+                                <input name="email" placeholder="Enter Your Email Address" type="email" tabindex="2" required>
                               </fieldset>
                               <fieldset>
-                                <input name="phone" placeholder="Your Phone Number" type="tel" tabindex="3" pattern="[0-9]+" required>
+                                <input name="phone" placeholder="Enter Your Phone Number With Dashes" type="tel" tabindex="3" pattern="^(1-)?\d{3}-\d{3}-\d{4}$" required>
                               </fieldset>
                               <fieldset>
-                                <textarea name="message" placeholder="Type your message here...." type="text" tabindex="5" required></textarea>
+                                <textarea name="message" placeholder="Type Your Message Here...." type="text" tabindex="5" required></textarea>
                               </fieldset>
                               <fieldset>
                                 <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
