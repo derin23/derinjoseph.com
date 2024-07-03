@@ -44,3 +44,8 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+//get current year for copyright
+function getCurrentYear() {
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  }
